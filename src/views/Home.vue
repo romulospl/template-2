@@ -10,13 +10,21 @@ const { increment } = mapActions(useMainStore, ["increment"])
 
 <template>
     <div>
-        <h1>Home</h1>
+        <h3>Home</h3>
     </div>
     <div class="w-fit mx-auto mt-8">
+        <v-card>
+            <v-card-title>
+                <span>Pinia example: </span>
+            </v-card-title>
+            <v-card-text>
+                <v-btn class="main-button" @click="counter++">count is {{ counter }}</v-btn>
+            </v-card-text>
+        </v-card>
       <div>
-        <span>Pinia example: </span>
+        
       </div>
-      <button class="main-button" type="button" @click="increment">count is {{ counter }}</button>
+      
     </div>
 </template>
 
